@@ -109,7 +109,7 @@ init_cpu:
 init_wdt:
 	/* disable WDT(Watch Dog Timer) */
 	ldr	r0, =ELFIN_WATCHDOG_BASE
-	mov	r1, #0x0
+	mov	r1, #0x0 // Reset:disable interrupt:disable Watchdogtimer:disable 
 	str	r1, [r0]
 
 	mov	pc, lr
